@@ -1,26 +1,18 @@
-// Change text content dynamically
-function changeText() {
-    const textElement = document.getElementById('dynamic-text');
-    textElement.textContent = 'The text has been changed dynamically!';
-}
+const title = document.getElementById("title");
+title.textContent = "I love javascript and DOM manipulation";
+title.style.color = "yellow";
 
-// Modify CSS styles via JavaScript
-function changeStyle() {
-    const styleElement = document.getElementById('styled-element');
-    styleElement.style.color = 'blue';
-    styleElement.style.fontSize = '20px';
-    styleElement.style.fontWeight = 'bold';
-}
-
-// Add or remove an element when a button is clicked
+// // Add or remove an element when a button is clicked
 function toggleElement() {
-    const container = document.getElementById('element-container');
-    const existingElement = document.getElementById('dynamic-element');
+    const container = document.getElementById('container');
+    const element = document.getElementById('dynamic-element');
 
-    if (existingElement) {
-        container.removeChild(existingElement);
+    if (element) {
+        // If the element exists, remove it
+        container.removeChild(element);
     } else {
-        const newElement = document.createElement('div');
+        // If the element doesn't exist, create and add it
+        const newElement = document.createElement('p');
         newElement.id = 'dynamic-element';
         newElement.textContent = 'This is a dynamically added element!';
         container.appendChild(newElement);
